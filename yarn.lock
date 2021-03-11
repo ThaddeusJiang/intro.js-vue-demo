@@ -3949,6 +3949,11 @@ inquirer@^7.3.3:
     strip-ansi "^6.0.0"
     through "^2.3.6"
 
+intro.js@^3.3.1:
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/intro.js/-/intro.js-3.3.1.tgz#f9fa4253b159bd640f06d86ca67248bab7f6579f"
+  integrity sha512-Y+iMbIzVQou9PDRP5miKa7NNQeUkSA6XFp+atnGiTarEi2jghthSLK+9JUvdM6QvQ9G+bpOEfKd+DNtWJlGb9w==
+
 ip@^1.1.5:
   version "1.1.5"
   resolved "https://registry.yarnpkg.com/ip/-/ip-1.1.5.tgz#bdded70114290828c0a039e72ef25f5aaec4354a"

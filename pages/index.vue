@@ -5,30 +5,40 @@
       <h1 class="title">
         intro.js-vue-demo
       </h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
+      <section>
+        <input type="text" name="name" />
+        <button id="btn-say" @click="say">say hi</button>
+      </section>
     </div>
   </div>
 </template>
 
 <script>
-export default {}
+import introJs from "intro.js";
+
+export default {
+  mounted() {
+    introJs()
+      .setOptions({
+        steps: [
+          // {
+          //   title: "Welcome",
+          //   intro: "Hello World! 👋"
+          // }
+          {
+            element: document.querySelector("input[name='name']"),
+            intro: "Typing your name"
+          },
+          {
+            title: "Step 2",
+            element: document.querySelector("#btn-say"),
+            intro: "Clicking button"
+          }
+        ]
+      })
+      .start();
+  }
+};
 </script>
 
 <style>
@@ -42,16 +52,8 @@ export default {}
 }
 
 .title {
-  font-family:
-    'Quicksand',
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
+  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   display: block;
   font-weight: 300;
   font-size: 100px;
